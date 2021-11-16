@@ -9,10 +9,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const without = function(source, itemsToRemove) {
-  for (let x = 0; x < itemsToRemove.length; x++)
-    source = source.filter(element => element !== itemsToRemove[x]);
-
-  return source;
+  return source.filter((element, x) => element !== itemsToRemove[x]);
 };
 
 // TEST CASE
