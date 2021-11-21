@@ -19,4 +19,4 @@ const map = function(array, callback) {
 }
 
 //TEST CODE
-console.log(assertArraysEqual(map(words, word => word[0]), words.map(x => x[0])));
+assertArraysEqual(map(words, word => word[0]), words.map(x => x[0]));
