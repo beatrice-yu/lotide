@@ -1,5 +1,5 @@
 const eqArrays = function(x, y) {
-  return (JSON.stringify(x) === JSON.stringify(y)) ? true : false;
+  return Array.isArray(x) && Array.isArray(y) && x.length === y.length && x.every((value, i) => value === y[i]);
 };
 
 const assertArraysEqual = function(actual, expected) {
