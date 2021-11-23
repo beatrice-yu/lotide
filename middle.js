@@ -1,23 +1,5 @@
-const eqArrays = function(x, y) {
-  return Array.isArray(x) && Array.isArray(y) && x.length === y.length && x.every((value, i) => value === y[i]);
-};
-
-const assertArraysEqual = function(actual, expected) {
-  console.log(
-    (eqArrays(actual, expected)) ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`
-  );
-};
-
 const middle = function(x) {
   return (x.length > 2) ? (x.length % 2 === 0) ? [x[Math.floor(x.length / 2) - 1], x[Math.floor(x.length / 2)]] : [x[Math.floor(x.length / 2)]] : [];
 };
 
-//TEST CASE
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-
-assertArraysEqual(middle([6, 5, 3, 4, 2, 1]), middle([1, 2, 3, 4, 5, 6])); //true
+module.exports = middle;
